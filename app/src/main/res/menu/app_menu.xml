@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="@string/account">
+        <menu>
+            <item
+                android:id="@+id/menu_settings"
+                android:icon="@drawable/ic_settings"
+                android:title="@string/settings" />
+            <item
+                android:id="@+id/menu_notifications"
+                android:icon="@drawable/ic_notifications"
+                android:title="@string/notifications" />
+            <item
+                android:id="@+id/menu_history"
+                android:icon="@drawable/ic_history"
+                android:title="@string/order_history" />
+        </menu>
+    </item>
+    <item android:title="@string/general">
+        <menu>
+            <item
+                android:id="@+id/menu_privacy_policy"
+                android:icon="@drawable/ic_privacy"
+                android:title="@string/privacy_policy" />
+            <item
+                android:id="@+id/menu_terms_conditions"
+                android:icon="@drawable/ic_info"
+                android:title="@string/terms_conditions" />
+            <item
+                android:id="@+id/menu_logout"
+                android:icon="@drawable/ic_logout"
+                android:title="@string/log_out" />
+        </menu>
+    </item>
+</menu>

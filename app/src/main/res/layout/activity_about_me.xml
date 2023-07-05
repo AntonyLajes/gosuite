@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="vertical"
+    tools:context=".ui.view.activities.AboutMeActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:padding="16dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/text_hi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/hi"
+            android:textColor="@color/color_primary"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:chainUseRtl="true"
+            app:layout_constraintBottom_toTopOf="@id/text_about_me"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+        <TextView
+            android:layout_marginTop="16dp"
+            android:id="@+id/text_about_me"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:gravity="center"
+            android:linksClickable="true"
+            android:text="@string/about_me"
+            android:textColor="@color/color_primary"
+            android:textColorLink="@color/color_primary"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@id/button_linkedin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_hi" />
+
+        <ImageView
+            android:id="@+id/button_linkedin"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="16dp"
+            android:contentDescription="@string/go_to_linkedin"
+            android:src="@drawable/ic_linkedin"
+            app:chainUseRtl="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/button_github"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_about_me" />
+
+        <ImageView
+            android:id="@+id/button_github"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="16dp"
+            android:contentDescription="@string/go_to_github"
+            android:src="@drawable/ic_github"
+            app:layout_constraintBottom_toBottomOf="@id/button_linkedin"
+            app:layout_constraintEnd_toStartOf="@id/button_mail_me"
+            app:layout_constraintStart_toEndOf="@id/button_linkedin"
+            app:layout_constraintTop_toTopOf="@id/button_linkedin" />
+
+        <ImageView
+            android:id="@+id/button_mail_me"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="16dp"
+            android:contentDescription="@string/mail_me"
+            android:src="@drawable/ic_email"
+            app:layout_constraintBottom_toBottomOf="@id/button_linkedin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/button_github"
+            app:layout_constraintTop_toTopOf="@id/button_linkedin" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

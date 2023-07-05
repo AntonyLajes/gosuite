@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.nomargin.gosuite.ui.view.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_furnitureFragment"
+            app:destination="@id/furnitureFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_cart"
+            app:destination="@id/nav_cart" />
+    </fragment>
+    <fragment
+        android:id="@+id/furnitureFragment"
+        android:name="com.nomargin.gosuite.ui.view.fragments.FurnitureFragment"
+        android:label="fragment_furniture"
+        tools:layout="@layout/fragment_furniture" >
+        <action
+            android:id="@+id/action_furnitureFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+        <argument
+            android:name="furnitureData"
+            app:argType="com.nomargin.gosuite.util.models.FurnitureModel" />
+        <action
+            android:id="@+id/action_furnitureFragment_to_nav_search"
+            app:destination="@id/nav_search" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_favorite"
+        android:name="com.nomargin.gosuite.ui.view.fragments.FavoriteFragment"
+        android:label="fragment_favorite"
+        tools:layout="@layout/fragment_favorite" />
+    <fragment
+        android:id="@+id/nav_cart"
+        android:name="com.nomargin.gosuite.ui.view.fragments.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" >
+        <action
+            android:id="@+id/action_nav_cart_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_search"
+        android:name="com.nomargin.gosuite.ui.view.fragments.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_nav_search_to_furnitureFragment"
+            app:destination="@id/furnitureFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.nomargin.gosuite.ui.view.fragments.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_showcase_field"
+    android:layout_width="156dp"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="8dp"
+    android:layout_marginEnd="8dp"
+    android:background="@drawable/main_showcase_background">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/furniture_image_material_card"
+        android:layout_width="0dp"
+        android:layout_height="152dp"
+        android:layout_margin="4dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/forniture_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/forniture_image"
+            android:scaleType="centerCrop"
+            android:src="@drawable/standard_furniture" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="@id/furniture_image_material_card"
+        app:layout_constraintEnd_toEndOf="@id/furniture_image_material_card">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/soft_yellow"
+            android:paddingHorizontal="4dp"
+            android:paddingVertical="2dp">
+
+            <ImageView
+                android:id="@+id/image_star"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:contentDescription="@string/furniture_rate"
+                android:src="@drawable/ic_star"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/furniture_rate"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/furniture_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.9"
+                android:textColor="@color/hard_yellow"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/image_star"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/forniture_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/color_primary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/furniture_image_material_card"
+        tools:text="@string/outdoor_dining_table_description" />
+
+    <TextView
+        android:id="@+id/forniture_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_primary"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/forniture_name"
+        app:layout_constraintTop_toBottomOf="@id/forniture_name"
+        tools:text="Modern Chair" />
+
+    <TextView
+        android:id="@+id/furniture_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="8dp"
+        android:textColor="@color/color_primary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/forniture_name"
+        app:layout_constraintTop_toBottomOf="@id/forniture_category"
+        tools:text="$185.5" />
+
+    <ImageButton
+        android:id="@+id/button_add_to_cart"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_gravity="center"
+        android:layout_margin="8dp"
+        android:background="@drawable/rounded_green_background"
+        android:contentDescription="@string/add_to_cart_icon"
+        android:src="@drawable/ic_white_cart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

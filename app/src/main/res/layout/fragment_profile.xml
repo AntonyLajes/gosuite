@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.view.fragments.ProfileFragment">
+
+    <TextView
+        android:layout_marginTop="32dp"
+        android:id="@+id/my_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:chainUseRtl="true"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintVertical_bias="0.1"
+        android:text="@string/my_profile"
+        android:textColor="@color/color_primary"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/materialCardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="40dp"
+        app:layout_constraintBottom_toTopOf="@id/profile_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/my_profile">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/profile_image"
+            android:scaleType="centerCrop"
+            android:src="@drawable/orland_schuzo" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/profile_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/orlando_schuzo"
+        android:textColor="@color/color_primary"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/profile_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/materialCardView" />
+
+    <TextView
+        android:id="@+id/profile_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/orlando_schuzo_email"
+        android:textColor="@color/color_primary"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@id/menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_name" />
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/menu"
+        app:itemTextColor="@color/color_primary"
+        android:layout_width="0dp"
+        android:layout_marginTop="32dp"
+        android:layout_height="0dp"
+        app:itemIconTint="@color/color_primary"
+        app:elevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/app_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_email" />
+</androidx.constraintlayout.widget.ConstraintLayout>
