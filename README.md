@@ -15,7 +15,7 @@
  <a href="#features">Features</a> • 
  <a href="#demo">A quick demo</a> • 
  <a href="#download">Download</a> • 
- <a href="#technologies">Technologies</a> • 
+ <a href="#tools">Tools</a> • 
  <a href="#author">Author</a> • 
  <a href="#contact">Contact</a>
 </div>
@@ -48,12 +48,12 @@
   </div>
   <div>
     <h2 id="download">👇 Download</h2>
-    <p>You can download the apk here: </p>
+    <p>You can download the apk by <a href="https://easyupload.io/8su6zw" title="AppDownload">clicking here</a></p>
     <p>Note: Google Play Store link coming soon</p>
   </div>
-  <h2 id="technologies">🛠 Technologies</h2>
+  <h2 id="tools">🛠 Tools</h2>
 
-As seguintes ferramentas foram usadas na construção do projeto:
+The following tools were used in building the project:
 
 - [Android Studio](https://developer.android.com/studio)
 - [Kotlin](https://kotlinlang.org/)
